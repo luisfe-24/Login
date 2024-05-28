@@ -32,7 +32,10 @@ app.use(session({
 const connection = require('./database/db');
 
 app.get('/', (req, res)=>{
-    res.send('Hola');
+    res.render('index', {msg:'MENSAJE DESDE NODE'});
+})
+app.get('/login', (req, res)=>{
+    res.render('login');
 })
 
 app.listen(3000, (req, res)=>{
