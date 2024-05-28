@@ -1,19 +1,26 @@
+//1
 const express = require('express');
 const app = express();
 
+//2
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
+//3
 const dotenv = require('dotenv')
 dotenv.config({path:'./env/.env'});
 
+//4
 app.use('/resources', express.static('public'));
 app.use('/resources', express.static(__dirname + '/public'));
 
+//5
 app.set('view engine', 'ejs');
 
+//6
 const bcryptjs = require('bcryptjs');
 
+//7
 const session = require('express-session');
 app.use(session({
     secret:'1234',
@@ -21,7 +28,9 @@ app.use(session({
     saveUninitialized:true
 }));
 
-console.log(__dirname);
+//8
+const connection = require('./database/db');
+
 app.get('/', (req, res)=>{
     res.send('Hola');
 })
