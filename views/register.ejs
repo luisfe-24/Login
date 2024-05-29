@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
-    <title>Register</title>
+    <title>Register</title>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     
@@ -24,8 +25,20 @@
                 <a href="/" class="btn-cancel">Cancel</a><input type="submit" class="btn-save" value="Save">
             </div>
         </form>
-
     </div>
 
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text:'<%= alertMessage %>',
+                icon:'<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(() => {
+                window.location='<%= ruta %>';
+            });
+        </script>
+        <% } %>
 </body>
 </html>
