@@ -111,3 +111,45 @@ body{
     text-decoration: none;
 }
 
+/* index.ejs */
+.home h1{
+    text-align: center;
+    font-size: 50px;
+    padding: 70px 0 10px 0;
+}
+
+.a-logout{
+    width: 15%;
+    text-align: center;
+    padding: 20px;
+    background-color: #622aa3;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+}
+
+.a-login{
+    width: 15%;
+    text-align: center;
+    padding: 20px;
+    background-color: #1595b6;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+}
